@@ -2,8 +2,11 @@ from src.domain.LatLon import LatLon;
 
 class Meshcode:
 
+    _allowed_digit = [4, 6, 8]
+
     def __init__(self, meshcode):
-        self.meshcode = meshcode
+        if len(meshcode) in self._allowed_digit:
+            self.meshcode = meshcode
 
     @classmethod
     def encode_from_lat_lon(cls, latLon:LatLon, digit=4):

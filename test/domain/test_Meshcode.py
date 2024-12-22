@@ -9,6 +9,10 @@ class MeshcodeTest(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_init_fail(self):
+        with self.assertRaises(ValueError):
+            Meshcode("123")        
+
     def test_encode_from_lat_lon_first(self):
         lat = 40.0
         lon = 140.0
