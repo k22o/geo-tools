@@ -7,6 +7,8 @@ class Meshcode:
     def __init__(self, meshcode):
         if len(meshcode) in self._allowed_digit:
             self.meshcode = meshcode
+        else:
+            raise ValueError("invalid meshcode")
 
     @classmethod
     def encode_from_lat_lon(cls, latLon:LatLon, digit=4):
