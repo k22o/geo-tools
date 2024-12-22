@@ -7,6 +7,7 @@ import streamlit as st
 from src.domain.LatLon import LatLon
 from src.domain.Geohash import Geohash
 from src.domain.Meshcode import Meshcode
+from src.domain.CityMaster import CityMaster
 
 def showGeohash():
     st.title('Geohash')
@@ -41,7 +42,6 @@ def showMeshcode():
     meshcode4 = Meshcode.encode_from_lat_lon(latLon, 4)
     meshcode6 = Meshcode.encode_from_lat_lon(latLon, 6)
     meshcode8 = Meshcode.encode_from_lat_lon(latLon, 8)
-
     st.info(f'1次:   {meshcode4.meshcode}')
     st.info(f'2次:   {meshcode6.meshcode}')
     st.info(f'3次:   {meshcode8.meshcode}')
@@ -53,19 +53,48 @@ def showMeshcode():
     st.info(f'緯度 最小: {range["lat_min"]} 最大: {range["lat_max"]}')
     st.info(f'経度 最小: {range["lon_min"]} 最大: {range["lon_max"]}')
 
+def showMap():
+    st.title('Map')
+
+    # 地図を描画する
+    # 緯度経度を取る
+    # lat = 40
+    # lon = 140
+    # latLon = LatLon(lat, lon)
+
+def showCity():
+    st.title('City')
+
+    st.header('code -> name')
+    st.text("コード2桁 or 5桁を入力")
+    code = st.text_input(label='code', value='13101')
+    name = CityMaster.code_to_name(code)
+    st.info(f'地域名:   {name}')
+
+    st.header('pref -> cityList')
+    st.text("都道府県名 or 都道府県コード2桁を入力")
+    pref = st.text_input(label='pref', value='13')
+    list = CityMaster.get_list_in_pref(pref)
+    list = list.reset_index(drop=True)
+    st.table(list)
+
 
 if __name__ == "__main__":
 
     contents = [
         "geohash",
         "meshcode",
+        "map",
+        "city"
     ]
-
 
     page = st.sidebar.selectbox('コンテンツを選択してください', contents)
 
     if page == "geohash":
         showGeohash()
-
     elif page == "meshcode":
         showMeshcode()
+    elif page == "map":
+        showMap()
+    elif page == "city":
+        showCity()
