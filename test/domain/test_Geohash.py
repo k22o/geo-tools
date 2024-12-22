@@ -3,10 +3,10 @@ from src.domain.Geohash import Geohash
 from src.domain.LatLon import LatLon
 
 class GeohashTest(unittest.TestCase):
-    def set_up(self):
+    def setUp(self):
         pass
 
-    def tear_down(self):
+    def tearDown(self):
         pass
 
     def test_encode_from_lat_lon(self):

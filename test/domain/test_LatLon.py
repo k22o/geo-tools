@@ -3,10 +3,10 @@ import unittest
 from src.domain.LatLon import LatLon
 
 class LatLonTest(unittest.TestCase):
-    def set_up(self):
+    def setUp(self):
         pass
 
-    def tear_down(self):
+    def tearDown(self):
         pass
 
     def test_指定した桁数に変換する(self):
