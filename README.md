@@ -20,8 +20,3 @@ $ pip install requirements.txt
   - `sh execute_test.sh`
 - マスタを作成するとき
   - `sh create_master.sh`
-
-## 備考
-
-テストはwslじゃないと動かない
-sreamlitはbashじゃないと動かない
