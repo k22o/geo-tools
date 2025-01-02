@@ -8,9 +8,9 @@ TBD
 
 ## 初期セットアップ
 
-'''
+```
 $ pip install requirements.txt
-'''
+```
 
 ## スクリプト
 
