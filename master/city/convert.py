@@ -1,7 +1,7 @@
 import pandas as pd
 import os
 
-OUTPUT_FILE_NAME = "../../src/data/cityMaster.csv"
+OUTPUT_FILE_NAME = "./cityMaster.csv"
 
 KEY_PREF_CODE = "prefCode"
 KEY_PREF_NAME = "prefName"

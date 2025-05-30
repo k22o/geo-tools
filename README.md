@@ -1,22 +1,9 @@
 # geo-tools
 
-地理情報を取り扱うツールたち
+地理情報を取り扱うためのコード群
 
-## できること
+## コンテンツ
 
-TBD
-
-## 初期セットアップ
-
-```
-$ pip install requirements.txt
-```
-
-## スクリプト
-
-- アプリを起動する
-  - `streamlit run src/app.py`
-- テストを実行するとき
-  - `sh execute_test.sh`
-- マスタを作成するとき
-  - `sh create_master.sh`
+- docker: 地理データを扱うためのdockerイメージを作る
+- master: 地理データのマスタを作る
+- streamlit: 地理データを扱うためのストリームレットアプリを作る
