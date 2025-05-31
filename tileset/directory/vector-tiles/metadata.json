@@ -1,0 +1,14 @@
+{
+"name": "./vector-tiles",
+"description": "./vector-tiles",
+"version": "2",
+"minzoom": "0",
+"maxzoom": "2",
+"center": "139.738900,35.628400,2",
+"bounds": "139.738900,35.628400,139.775400,35.692300",
+"type": "overlay",
+"format": "pbf",
+"generator": "tippecanoe v1.36.0",
+"generator_options": "tippecanoe -e ./vector-tiles -Z 0 -z 2 -pC ../data/line.geojson ../data/polygon.geojson",
+"json": "{\"vector_layers\": [ { \"id\": \"line\", \"description\": \"\", \"minzoom\": 0, \"maxzoom\": 2, \"fields\": {\"name\": \"String\", \"operator\": \"String\", \"type\": \"String\"} }, { \"id\": \"polygon\", \"description\": \"\", \"minzoom\": 0, \"maxzoom\": 2, \"fields\": {\"area\": \"String\", \"name\": \"String\", \"type\": \"String\"} } ],\"tilestats\": {\"layerCount\": 2,\"layers\": [{\"layer\": \"line\",\"count\": 1,\"geometry\": \"LineString\",\"attributeCount\": 3,\"attributes\": [{\"attribute\": \"name\",\"count\": 1,\"type\": \"string\",\"values\": [\"山手線\"]},{\"attribute\": \"operator\",\"count\": 1,\"type\": \"string\",\"values\": [\"JR東日本\"]},{\"attribute\": \"type\",\"count\": 1,\"type\": \"string\",\"values\": [\"railway\"]}]},{\"layer\": \"polygon\",\"count\": 1,\"geometry\": \"Polygon\",\"attributeCount\": 3,\"attributes\": [{\"attribute\": \"area\",\"count\": 1,\"type\": \"string\",\"values\": [\"1.15平方キロメートル\"]},{\"attribute\": \"name\",\"count\": 1,\"type\": \"string\",\"values\": [\"皇居\"]},{\"attribute\": \"type\",\"count\": 1,\"type\": \"string\",\"values\": [\"park\"]}]}]}}"
+}
