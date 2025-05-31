@@ -8,8 +8,8 @@
 - master: 地理データのマスタを作る
 - streamlit: 地理データを扱うためのストリームレットアプリを作る
 - map-samples: 地図描画のサンプル
-- tileset: タイルセットを作る (TODO ラスター版のサンプル)
-- gdal: TODO
+- tileset: タイルセットを作る)
+- gdal: TODO gdalのコマンド、変更になったかも
 - ui-tool: いろいろ計算する用のUIツール (TODO)
 
 ## よく使うソフトウェア
