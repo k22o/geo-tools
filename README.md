@@ -11,9 +11,10 @@
 - tileset: タイルセットを作る
 - gdal: TODO gdalのコマンド、変更になったかも
 - tools: いろいろ計算する用のUIツール
-  - [geohash変換ツール](./tools/geohash/index.html)
-  - [メッシュコード変換ツール](./tools/meshcode/index.html)
-  - [市区町村マスタ](./tools/city-master/index.html)
+  - [geohash変換ツール](https://k22o.github.io/geo-tools/tools/geohash/index.html)
+  - [メッシュコード変換ツール](https://k22o.github.io/geo-tools/tools/meshcode/index.html)
+  - [市区町村マスタ](https://k22o.github.io/geo-tools/tools/city-master/index.html)
+
 ## よく使うソフトウェア
 
 - leaflet
