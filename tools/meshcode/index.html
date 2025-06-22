@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メッシュコード変換ツール</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="container__title">メッシュコード変換ツール</h1>
+        
+        <div class="info-box">
+            <h3 class="info-box__title">メッシュコードについて</h3>
+            <p class="info-box__text">メッシュコードは、日本の地域メッシュ統計で使用される地理的な区画コードです。</p>
+            <h4 class="info-box__subtitle">メッシュコードの種類:</h4>
+            <ul class="info-box__list">
+                <li class="info-box__item"><strong>1次メッシュ（4桁）:</strong> 約80km × 80km</li>
+                <li class="info-box__item"><strong>2次メッシュ（6桁）:</strong> 約10km × 10km</li>
+                <li class="info-box__item"><strong>3次メッシュ（8桁）:</strong> 約1km × 1km</li>
+            </ul>
+        </div>
+
+        <section>
+            <h2>緯度経度からメッシュコードに変換</h2>
+            <div class="form-group">
+                <label class="form-group__label" for="meshcode-latitude">緯度:</label>
+                <input class="form-group__input" type="number" id="meshcode-latitude" step="any" placeholder="例: 35.6812">
+            </div>
+            <div class="form-group">
+                <label class="form-group__label" for="meshcode-longitude">経度:</label>
+                <input class="form-group__input" type="number" id="meshcode-longitude" step="any" placeholder="例: 139.7671">
+            </div>
+            <div class="form-group">
+                <label class="form-group__label" for="meshcode-digit">メッシュコードの桁数:</label>
+                <select class="form-group__input" id="meshcode-digit">
+                    <option value="4" selected>4桁（1次メッシュ）</option>
+                    <option value="6">6桁（2次メッシュ）</option>
+                    <option value="8">8桁（3次メッシュ）</option>
+                </select>
+            </div>
+
+            <button class="button" onclick="convertToMeshcodeFromLatLon()">メッシュコードに変換</button>
+        </section>
+
+        <section>
+            <h2>メッシュコードから緯度経度に変換</h2>
+            <div class="form-group form-group--margin-top">
+                <label class="form-group__label" for="meshcode">メッシュコード:</label>
+                <input class="form-group__input" type="text" id="meshcode" placeholder="例: 5339">
+            </div>
+
+            <button class="button" onclick="convertToLatLngFromMeshcode()">緯度経度に変換</button>
+        </section>
+
+        <section>
+            <h2>結果</h2>
+            <div id="result" class="result"></div>
+        </section>
+    </div>
+
+    <script src="./meshcode.js"></script>
+</body>
+</html> 

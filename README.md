@@ -8,10 +8,12 @@
 - master: 地理データのマスタを作る
 - streamlit: 地理データを扱うためのストリームレットアプリを作る
 - map-samples: 地図描画のサンプル
-- tileset: タイルセットを作る)
+- tileset: タイルセットを作る
 - gdal: TODO gdalのコマンド、変更になったかも
-- ui-tool: いろいろ計算する用のUIツール (TODO)
-
+- tools: いろいろ計算する用のUIツール
+  - [geohash変換ツール](./tools/geohash/index.html)
+  - [メッシュコード変換ツール](./tools/meshcode/index.html)
+  - [市区町村マスタ](./tools/city-master/index.html)
 ## よく使うソフトウェア
 
 - leaflet

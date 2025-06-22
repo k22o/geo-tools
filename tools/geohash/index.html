@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoHash 変換ツール</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="container__title">geohash変換ツール</h1>
+        
+        <section>
+            <h2>緯度経度からGeoHashに変換</h2>
+            <div class="form-group">
+                <label class="form-group__label" for="geohash-latitude">緯度:</label>
+                <input class="form-group__input" type="number" id="geohash-latitude" step="any" placeholder="例: 35.6812">
+            </div>
+            <div class="form-group">
+                <label class="form-group__label" for="geohash-longitude">経度:</label>
+                <input class="form-group__input" type="number" id="geohash-longitude" step="any" placeholder="例: 139.7671">
+            </div>
+            <div class="form-group">
+                <label class="form-group__label" for="geohash-precision">桁数:</label>
+                <select class="form-group__input" id="geohash-precision">
+                    <option value="1">1文字 (±2500km)</option>
+                    <option value="2">2文字 (±630km)</option>
+                    <option value="3">3文字 (±78km)</option>
+                    <option value="4">4文字 (±20km)</option>
+                    <option value="5">5文字 (±2.4km)</option>
+                    <option value="6" selected>6文字 (±0.61km)</option>
+                    <option value="7">7文字 (±0.076km)</option>
+                    <option value="8">8文字 (±0.019km)</option>
+                    <option value="9">9文字 (±0.0024km)</option>
+                </select>
+            </div>
+
+            <button class="button" onclick="convertToGeohashFromLatLon()">GeoHashに変換</button>
+        </section>
+
+        <section>
+            <h2>GeoHashから緯度経度に変換</h2>
+            <div class="form-group form-group--margin-top">
+                <label class="form-group__label" for="geohash">GeoHash:</label>
+                <input class="form-group__input" type="text" id="geohash" placeholder="例: xn774c">
+            </div>
+
+            <button class="button" onclick="convertToLatLngFromGeohash()">緯度経度に変換</button>
+        </section>
+
+        <section>
+            <h2>結果</h2>
+            <div id="result" class="result"></div>
+        </section>
+    </div>
+
+    <script src="./geohash.js"></script>
+</body>
+</html>

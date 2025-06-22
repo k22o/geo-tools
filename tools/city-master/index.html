@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>市区町村マスター調査ツール</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="container__title">市区町村マスター調査ツール</h1>
+        
+        <section>
+            <h2>都道府県から市区町村を検索</h2>
+            <div class="form-group">
+                <label class="form-group__label" for="prefecture-select">都道府県:</label>
+                <select class="form-group__input" id="prefecture-select">
+                    <option value="">都道府県を選択してください</option>
+                </select>
+            </div>
+            <button class="button" onclick="searchCitiesByPrefecture()">市区町村を表示</button>
+        </section>
+
+        <section>
+            <h2>コードから市区町村名を検索</h2>
+            <div class="form-group form-group--margin-top">
+                <label class="form-group__label" for="city-code">市区町村コード:</label>
+                <input class="form-group__input" type="text" id="city-code" placeholder="例: 13101（5桁のコード）" maxlength="5">
+            </div>
+            <button class="button" onclick="searchByCode()">検索</button>
+        </section>
+
+        <section>
+            <h2>市区町村名からコードを検索</h2>
+            <div class="form-group form-group--margin-top">
+                <label class="form-group__label" for="city-name">市区町村名:</label>
+                <input class="form-group__input" type="text" id="city-name" placeholder="例: 千代田区">
+            </div>
+            <button class="button" onclick="searchByName()">検索</button>
+        </section>
+
+        <section>
+            <h2>検索結果</h2>
+            <div id="result" class="result"></div>
+            
+            <!-- 市区町村情報表示テンプレート -->
+            <template id="city-info-template">
+                <div class="success">
+                    <h3>検索結果</h3>
+                    <table class="result-table">
+                        <tr>
+                            <th>都道府県コード</th>
+                            <td id="info-pref-code"></td>
+                        </tr>
+                        <tr>
+                            <th>都道府県名</th>
+                            <td id="info-pref-name"></td>
+                        </tr>
+                        <tr>
+                            <th>市区町村コード</th>
+                            <td id="info-city-code"></td>
+                        </tr>
+                        <tr>
+                            <th>市区町村名</th>
+                            <td id="info-city-name"></td>
+                        </tr>
+                    </table>
+                </div>
+            </template>
+            
+            <!-- 市区町村一覧表示テンプレート -->
+            <template id="city-table-template">
+                <div class="success">
+                    <h3 id="table-title"></h3>
+                    <table class="result-table">
+                        <thead>
+                            <tr>
+                                <th>都道府県コード</th>
+                                <th>都道府県名</th>
+                                <th>市区町村コード</th>
+                                <th>市区町村名</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                        </tbody>
+                    </table>
+                </div>
+            </template>
+        </section>
+    </div>
+
+    <script src="./city-master.js"></script>
+</body>
+</html> 
