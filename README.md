@@ -6,7 +6,6 @@
 
 - docker: 地理データを扱うためのdockerイメージを作る
 - master: 地理データのマスタを作る
-- streamlit: 地理データを扱うためのストリームレットアプリを作る
 - map-samples: 地図描画のサンプル
 - tileset: タイルセットを作る
 - gdal: TODO gdalのコマンド、変更になったかも
